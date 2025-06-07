@@ -1,0 +1,54 @@
+/* styles/SingleRecipes.css */
+.recipe-wrapper {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+}
+
+.recipe-left,
+.recipe-right {
+  flex: 1;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .recipe-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* Input & Textarea styling */
+.input-field {
+  width: 100%;
+  border: 1px solid #B83B5E;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 0 3px #F08A5D50;
+}
+
+/* Error message */
+.error-text {
+  color: #e53e3e;
+  font-size: 0.875rem;
+}
+
+/* Button styling */
+.btn-submit {
+  width: 100%;
+  background-color: #F08A5D;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-submit:hover {
+  background-color: #B83B5E;
+}
