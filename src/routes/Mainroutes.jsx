@@ -6,7 +6,7 @@ import Recipes from '../pages/Recipes'
 import Create from '../pages/Create'
 import SingleRecipes from '../pages/SingleRecipes'
 import Pagenotfound from '../pages/Pagenotfound '
-import Fav from '../pages/fav'
+import Fav from '../pages/Fav'
 
 
 
