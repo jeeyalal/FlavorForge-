@@ -20,6 +20,10 @@ function About() {
         <p className="text-md text-[#6A2C70] font-medium">
           Built with 💜 using React and Tailwind CSS — crafted with love for food and code.
         </p>
+
+        <p className="text-sm text-[#6A2C70] font-semibold mt-4">
+          Created by Harsh Anita Mishra
+        </p>
       </div>
     </div>
   );
