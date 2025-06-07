@@ -13,7 +13,7 @@ function Create() {
     const {
         register,
         reset,
-        handleSubmit, 
+        handleSubmit,
         formState: { errors }
     } = useForm();
 
@@ -21,7 +21,7 @@ function Create() {
         const newRecipe = { ...e, id: nanoid() };
         const updatedData = [...data, newRecipe];
         setdata(updatedData);
-        localStorage.setItem("recipes",JSON.stringify(updatedData))
+        localStorage.setItem("recipes", JSON.stringify(updatedData))
         toast.success('Recipe created succefully')
         navigate('/recipes')
         reset();
@@ -38,7 +38,7 @@ function Create() {
                 <h2 className="text-3xl text-center font-bold text-[#B83B5E]">Create a Recipe</h2>
 
                 {/* Image */}
-                <div>
+                {/* <div>
                     <input
                         {...register('image', { required: 'Image URL is required' })}
                         type="url"
@@ -46,7 +46,14 @@ function Create() {
                         className="w-full border border-[#B83B5E] p-3 rounded focus:outline-none focus:ring-2 focus:ring-[#F08A5D]"
                     />
                     {errors.image && <p className="text-red-600 text-sm mt-1">{errors.image.message}</p>}
-                </div>
+                </div> */}
+                <input
+                    {...register('image', { required: 'Image URL is required' })}
+                    type="text"  // use text here to accept any URL string
+                    placeholder="Image URL"
+                    className="w-full border border-[#B83B5E] p-3 rounded focus:outline-none focus:ring-2 focus:ring-[#F08A5D]"
+                />
+
 
                 {/* Title */}
                 <div>
@@ -88,7 +95,7 @@ function Create() {
                         {...register('instruction', { required: 'Instructions are required' })}
                         placeholder="Enter instructions separated by commas (e.g., Preheat oven, Spread sauce, Bake for 10 mins)"
                         rows="3"
-                        
+
                         className="w-full border border-[#B83B5E] p-3 rounded focus:outline-none focus:ring-2 focus:ring-[#F08A5D]"
                     />
                     {errors.instruction && <p className="text-red-600 text-sm mt-1">{errors.instruction.message}</p>}
